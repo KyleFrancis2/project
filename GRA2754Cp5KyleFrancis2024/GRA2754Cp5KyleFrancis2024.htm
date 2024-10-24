@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2, #div3, #div4 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding-top: 110px;
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 110px;
+    border: 1px solid #FFFFFF;
+}
+	clearfloat{
+		clear:both;
+		display:block;
+	}
+body {
+    background-image: url(d739d5b2034ba2cb385637201e0b0522.jpg);
+}
+body h2 {
+}
+body p {
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h2>
+Help the Plantmen fight back</h2>
+<p><strong>Drag the Plantmen towards the agent to help them fight!</strong></p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="would-you-wear-this-costume-for-80-dollars-v0-wdtfmard8eed1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+<img src="Gun_Soldier.png" width="88" height="31"></div>
+	<clearfloat></clearfloat>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="Kid-s-Plants-Vs-Zombies-Snow-Pea-Costume-Jumpsuit.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+</div>
+
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+<img src="Nova_Prospekt_Standard_Soldier.png" width="88" height="31"></div>
+</body>
+</html>
