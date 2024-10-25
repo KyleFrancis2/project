@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2, #div3, #div4 {
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding-top: 110px;
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 110px;
+    border: 1px solid #FFFFFF;
+    display: inline-block;
+    vertical-align: top;
+}
+wrapper {
+    width: 900px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+	clearfloat{
+		clear:both;
+		display:block;
+	}
+body {
+    background-image: url(d739d5b2034ba2cb385637201e0b0522.jpg);
+}
+
+h2 {
+    background-color: #9EFF87;
+    visibility: visible;
+    -webkit-box-shadow: 0px 0px 25px 10px #8BFA99;
+    box-shadow: 0px 0px 25px 10px #8BFA99;
+    left: 0px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Spooky Monster";
+    max-width: none;
+    max-height: none;
+    border-radius: 42px;
+}
+#div2 img {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: -70px;
+    margin-left: -70px;
+    /* [disabled]margin-bottom: 9px; */
+}
+body p strong {
+    color: #000000;
+    -webkit-box-shadow: 0px 0px 25px 6px #FF0000;
+    box-shadow: 0px 0px 25px 6px #FF0000;
+    background-color: #FFFD00;
+    right: auto;
+    text-align: center;
+    display: block;
+    max-width: 1128px;
+    min-width: 0px;
+    max-height: 17px;
+    border-radius: 222px;
+}
+#div1 #drag1 {
+    margin-top: -72px;
+    width: 144px;
+    height: 200px;
+}
+#div3 #drag2 {
+    margin-left: -61px;
+    margin-top: -65px;
+    width: 211px;
+    height: 193px;
+}
+#div1 {
+    background-color: #00FF24;
+    padding-top: 147px;
+    padding-right: 147px;
+    padding-bottom: 147px;
+    padding-left: 147px;
+}
+#div3 {
+    background-color: #00FFEB;
+    padding-top: 147px;
+    padding-right: 147px;
+    padding-bottom: 147px;
+    padding-left: 147px;
+}
+#div4:empty {
+    background-image: url(Nova_Prospekt_Standard_Soldier.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#div4 {
+    background-color: #522829;
+    padding-top: 147px;
+    padding-right: 147px;
+    padding-bottom: 147px;
+    padding-left: 147px;
+}
+#div2:empty{
+  
+   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(Gun_Soldier.png);
+    background-position: center;
+}
+#div2 {
+    background-color: #636909;
+    padding-right: 147px;
+    padding-bottom: 147px;
+    padding-left: 147px;
+    padding-top: 147px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-size: contain;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+<wrapper>
+  <h2>
+  Help the Plantmen fight back!</h2>
+  <p><strong>Drag the Plantmen towards the agents to help them fight!</strong></p>
+  
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="would-you-wear-this-costume-for-80-dollars-v0-wdtfmard8eed1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="163">
+  </div>
+  
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="Kid-s-Plants-Vs-Zombies-Snow-Pea-Costume-Jumpsuit.png" draggable="true" ondragstart="drag(event)" id="drag2" width="167" height="167">
+  </div>
+  
+  <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</wrapper>
+</body>
+</html>
